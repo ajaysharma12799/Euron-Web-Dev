@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="class-agenda" class="agenda-box">
+      <h2>Today's Class Agenda</h2>
+      <ol>
+        <li>Class vs Id</li>
+        <li>Media Tags - Audio, Video, Figure and Picture</li>
+        <li>Embedding Tags - Embedd Map, YT Video or any other source video</li>
+        <li>Table Tag</li>
+        <li>
+          Form Tag - Input, button, textarea, different attributes of input tag
+        </li>
+      </ol>
+    </div>
+
+    <div id="project-agenda" class="agenda-box">
+      <h2>Today's Project Agenda</h2>
+      <ol>
+        <li>Class vs Id</li>
+        <li>Media Tags - Audio, Video, Figure and Picture</li>
+        <li>Embedding Tags - Embedd Map, YT Video or any other source video</li>
+        <li>Table Tag</li>
+        <li>
+          Form Tag - Input, button, textarea, different attributes of input tag
+        </li>
+      </ol>
+    </div>
+
+    <div>
+      <!-- <audio src="./aud.mp3" controls>
+        <p>Tumhara browser HTML Video Support nahi karta hai</p>
+      </audio> -->
+
+      <!-- <video width="250" src="./vid.mp4" controls autoplay muted></video> -->
+
+      <!-- <iframe
+        src="https://getbootstrap.com/"
+        width="500"
+        frameborder="0"
+      ></iframe> -->
+
+      <!-- <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/5enh9fEsjgc?si=6S9G6-DwSxRp70My"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe> -->
+
+      <!-- <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.2733597646306!2d77.3554666760162!3d28.621568184577537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce90d614f44c1%3A0x74712892909379ab!2sStarbucks!5e0!3m2!1sen!2sin!4v1759047668512!5m2!1sen!2sin"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe> -->
+
+      <!-- <figure>
+        <img
+          src="../day1/git-contrib.png"
+          alt="Ajay Sharma Git Contrib Chart"
+        />
+        <figcaption>Hi I am Ajay Sharma</figcaption>
+      </figure> -->
+    </div>
+
+    <div>
+      <!-- <table border="1" cellspacing="10" cellpadding="10" align="center">
+        <thead>
+          <tr>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wed</th>
+            <th>TH</th>
+            <th>Friday</th>
+            <th>Sat</th>
+            <th>Sunday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+        </tbody>
+      </table> -->
+
+      <table align="center" border="1" cellspacing="10" cellpadding="10">
+        <thead>
+          <tr>
+            <th rowspan="2">Heading</th>
+            <th>Students</th>
+            <th colspan="3">Details</th>
+          </tr>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Roll Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th rowspan="4">Student List</th>
+            <td>1</td>
+            <td>Victor</td>
+            <td>Computer Science</td>
+            <td>12345</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Victor</td>
+            <td>Computer Science</td>
+            <td>12345</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Victor</td>
+            <td>Computer Science</td>
+            <td>12345</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Victor</td>
+            <td>Computer Science</td>
+            <td>12345</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <form>
+        <div>
+          <label for="full-name">Name*</label>
+          <input placeholder="Enter your name" type="text" id="full-name" />
+        </div>
+
+        <div>
+          <label for="email">Email*</label>
+          <input placeholder="Enter your email" type="email" id="email" />
+        </div>
+
+        <!-- <input placeholder="Enter your password" type="password" /> -->
+
+        <!-- <input placeholder="Enter your time" type="time" /> -->
+
+        <!-- <input placeholder="Enter your date of birth" type="date" /> -->
+
+        <!-- <input placeholder="Enter your color" type="color" /> -->
+
+        <!-- <input placeholder="Enter your cv" type="file" /> -->
+
+        <div>
+          <h2>Select your desired tech stack</h2>
+          <div>
+            <label for="mern-stack">MERN Stack</label>
+            <input type="checkbox" />
+          </div>
+
+          <div>
+            <label for="java-springboot">Java Springboot</label>
+            <input type="checkbox" />
+          </div>
+
+          <div>
+            <label for="python-fastapi">Python FastAPI</label>
+            <input type="checkbox" />
+          </div>
+        </div>
+
+        <div>
+          <!-- <label for="uni">Select University</label> -->
+          <select>
+            <option value="">Select Your University</option>
+            <option value="amity-uni">Amity University</option>
+            <option value="abc">ABC</option>
+            <option selected value="mit">MIT</option>
+          </select>
+        </div>
+
+        <div>
+          <h2>Select Your Gender</h2>
+
+          <div>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="male" />
+          </div>
+
+          <div>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" value="female" />
+          </div>
+
+          <div>
+            <label for="other">Other</label>
+            <input type="radio" name="gender" value="other" />
+          </div>
+        </div>
+
+        <!-- <input placeholder="Select your range" type="range" /> -->
+
+        <!-- <input
+          placeholder="Enter your color"
+          type="button"
+          value="Hey, I am a button of type 'button'"
+        />
+
+        <input placeholder="Enter your number" type="number" />
+
+        <input placeholder="Enter your telephone number" type="tel" /> -->
+
+        <button>Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
