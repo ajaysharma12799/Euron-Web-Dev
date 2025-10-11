@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors & Box Model Explained</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =======================================================
+         🌐 UNIVERSAL SELECTOR
+         It applies styles to ALL elements on the page.
+      ======================================================= */
+      /* * {
+        margin: 0;
+        padding: 0;
+      } */
+
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      /* =======================================================
+         🔹 ELEMENT SELECTOR
+         Targets elements by their HTML tag name.
+      ======================================================= */
+      /* h1 {
+        color: red;
+      } */
+
+      /* =======================================================
+         🔹 CLASS SELECTOR
+         Targets elements using their "class" attribute.
+         (Use a dot '.' before the class name)
+      ======================================================= */
+      /* .info-box {
+        color: white;
+        background-color: lightgray;
+        padding: 10px;
+      } */
+
+      /* =======================================================
+         🔹 ID SELECTOR
+         Targets a specific element by its "id" attribute.
+         (Use a hash '#' before the id)
+      ======================================================= */
+      /* #daily-forecast {
+        color: red;
+        background-color: pink;
+        padding: 10px;
+      } */
+
+      /* =======================================================
+         🔹 COMBINATOR (RELATIONSHIP) SELECTORS
+      ======================================================= */
+
+      /* Descendant Selector (space)
+         → Selects elements inside another element.
+      */
+      /* div p {
+        color: green;
+      } */
+
+      /* Child Selector (>)
+         → Selects DIRECT children only.
+      */
+      /* div > p {
+        color: orange;
+      } */
+
+      /* Adjacent Sibling Selector (+)
+         → Selects the element just AFTER another element.
+      */
+      /* div + p {
+        color: red;
+      } */
+
+      /* General Sibling Selector (~)
+         → Selects ALL elements after a sibling.
+      */
+      /* div ~ p {
+        color: pink;
+      } */
+
+      /* =======================================================
+         🔹 ATTRIBUTE SELECTOR
+         Targets elements based on their attributes.
+      ======================================================= */
+      /* Example 1: Select elements with a specific type */
+      /* input[type="text"] {
+        border: 3px solid red;
+      } */
+
+      /* Example 2: Select elements that have ANY type attribute */
+      /* input[type] {
+        border: 3px solid green;
+      } */
+
+      /* =======================================================
+         🔹 PSEUDO-CLASS SELECTORS
+         Used for styling states or specific positions.
+      ======================================================= */
+      /* .pseudo-class:hover {
+        font-size: 25px;
+        color: blue;
+      }
+
+      input:focus {
+        outline: 2px solid red;
+      }
+
+      li:first-child {
+        color: purple;
+      }
+
+      li:last-child {
+        color: brown;
+      } */
+
+      /* =======================================================
+         🔹 PSEUDO-ELEMENT SELECTORS
+         Used to style parts of an element (::before / ::after)
+      ======================================================= */
+      /* .before-example::before {
+        content: "👉 ";
+      } */
+
+      .after-example::after {
+        content: " → Hi, I am after content!";
+        color: darkblue;
+      }
+
+      /* =======================================================
+         🎨 BOX MODEL
+         Demonstrates how width, height, padding, border, and margin work.
+      ======================================================= */
+      .box-model {
+        width: 300px;
+        height: 200px;
+        border: 10px solid green;
+        padding: 20px;
+        margin: 30px 0;
+        overflow: auto;
+
+        font-size: 18px;
+        font-weight: 700;
+        background-color: #f2f2f2;
+      }
+
+      /* =======================================================
+         🖼️ BACKGROUND PROPERTIES
+         Control how background images or colors appear.
+      ======================================================= */
+      .background-properties {
+        height: 400px;
+        width: 400px;
+        border: 5px solid black;
+
+        /* Try commenting/uncommenting each property to understand */
+        /* background-color: aqua; */
+        background-image: url("https://picsum.photos/400");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>🎯 CSS Selectors & Box Model Demo</h1>
+
+    <hr />
+
+    <h2>1️⃣ Basic Selectors</h2>
+    <ol>
+      <li>Universal Selector (<code>*</code>)</li>
+      <li>Element Selector (<code>h1, p, div...</code>)</li>
+      <li class="info-box">Class Selector (<code>.class</code>)</li>
+      <li id="daily-forecast">ID Selector (<code>#id</code>)</li>
+    </ol>
+
+    <h2>2️⃣ Combinator Selectors</h2>
+    <ol>
+      <li>Descendant Selector (<code>div p</code>)</li>
+      <li>Child Selector (<code>div &gt; p</code>)</li>
+      <li>Adjacent Sibling (<code>div + p</code>)</li>
+      <li>General Sibling (<code>div ~ p</code>)</li>
+    </ol>
+
+    <h2>3️⃣ Attribute Selectors</h2>
+    <p>Example: <code>input[type="text"]</code></p>
+    <input type="text" placeholder="Type here..." />
+    <input type="password" placeholder="Password" />
+
+    <h2>4️⃣ Pseudo Class Selectors</h2>
+    <ul>
+      <li class="pseudo-class">Hover over me (:hover)</li>
+      <li>First child example (:first-child)</li>
+      <li>Last child example (:last-child)</li>
+    </ul>
+
+    <h2>5️⃣ Pseudo Element Selectors</h2>
+    <ul>
+      <li class="before-example">Before (::before)</li>
+      <li class="after-example">After (::after)</li>
+    </ul>
+
+    <h2>6️⃣ Box Model Example</h2>
+    <div class="box-model">
+      This box shows how content, padding, border, and margin interact.
+      <br /><br />
+      📦 Content → inside padding → inside border → then margin outside.
+    </div>
+
+    <h2>7️⃣ Background Properties</h2>
+    <div class="background-properties"></div>
+
+    <br /><br /><br />
+  </body>
+</html>
