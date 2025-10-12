@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Concepts Demo</title>
+
+    <style>
+      /* -----------------------------
+         CSS VARIABLES (Custom Properties)
+         ----------------------------- */
+      :root {
+        --primary-color: orange;
+        --secondary-color: green;
+        --primary-font-size: 30px;
+        --default-padding: 20px;
+      }
+
+      /* -----------------------------
+         GLOBAL RESET (Removes default margins/paddings)
+         ----------------------------- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #e0f7ff;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+      }
+
+      /* -----------------------------
+         1️⃣ COMMON UTILITIES EXAMPLE
+         ----------------------------- */
+      .box-shadow-utility {
+        background-color: var(--primary-color);
+        color: white;
+        padding: var(--default-padding);
+        width: 80vw;
+        height: 40vh;
+        overflow: scroll;
+        cursor: pointer;
+        opacity: 0.9;
+        border-radius: 12px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      /* Hover effect with shadow + smooth transition */
+      .box-shadow-utility:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        background-color: var(--secondary-color);
+        transform: scale(1.03);
+      }
+
+      /* Make the first line stand out */
+      .box-shadow-utility::first-line {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      /* -----------------------------
+         2️⃣ TEXT SHADOW EXAMPLE
+         ----------------------------- */
+      #text-shadow-utility {
+        text-shadow: 3px 3px 5px red;
+        user-select: none; /* Prevents text selection */
+        margin: 20px 0;
+      }
+
+      /* -----------------------------
+         3️⃣ DISPLAY PROPERTY EXAMPLES
+         ----------------------------- */
+      .display-property-section {
+        margin-top: 30px;
+      }
+
+      .display-sample-1 {
+        border: 3px solid green;
+        padding: 10px;
+        display: inline-block; /* takes width & height, stays inline */
+        margin-right: 10px;
+      }
+
+      .display-sample-2 {
+        border: 3px solid purple;
+        padding: 10px;
+        display: block; /* starts on a new line */
+        width: 300px;
+        margin-top: 10px;
+      }
+
+      /* -----------------------------
+         4️⃣ CSS UNITS EXAMPLES
+         ----------------------------- */
+      .css-units-section {
+        margin-top: 40px;
+        font-size: 16px; /* base font for em/rem demo */
+      }
+
+      .em-box {
+        background: lightcoral;
+        padding: 1em; /* relative to parent font-size */
+        width: 10em; /* relative to parent font-size */
+        margin-bottom: 10px;
+      }
+
+      .rem-box {
+        background: lightseagreen;
+        padding: 1rem; /* relative to root font-size */
+        width: 10rem; /* relative to root font-size */
+      }
+
+      /* -----------------------------
+         5️⃣ TRANSITIONS & ANIMATIONS
+         ----------------------------- */
+      .transition-box {
+        width: 200px;
+        height: 200px;
+        background: orange;
+        border-radius: 10px;
+        margin-top: 40px;
+        transition: all 1s ease-in-out;
+      }
+
+      .transition-box:hover {
+        background: tomato;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ===============================
+         SECTION 1: Common Utilities
+         =============================== -->
+    <section>
+      <h1>1️⃣ Common Utilities (Shadow, Overflow, Cursor, etc.)</h1>
+      <p class="box-shadow-utility">
+        This box uses CSS variables, padding, overflow, cursor, and box-shadow.
+        <br />
+        Hover over me to see the shadow and color transition effect!
+        <br /><br />
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
+        perspiciatis ducimus dignissimos nesciunt asperiores corporis, saepe
+        error iste velit expedita.
+      </p>
+    </section>
+
+    <!-- ===============================
+         SECTION 2: Text Shadow
+         =============================== -->
+    <section>
+      <h1 id="text-shadow-utility">2️⃣ Text Shadow Example</h1>
+      <p>
+        The above heading has a <b>red text shadow</b> and cannot be selected
+        using the mouse.
+      </p>
+    </section>
+
+    <!-- ===============================
+         SECTION 3: Display Properties
+         =============================== -->
+    <section class="display-property-section">
+      <h1>3️⃣ Display Property Examples</h1>
+      <div class="display-sample-1">
+        This is <b>inline-block</b> — stays inline but accepts width/height.
+      </div>
+      <div class="display-sample-2">
+        This is <b>block</b> — starts on a new line and takes full width.
+      </div>
+    </section>
+
+    <!-- ===============================
+         SECTION 4: CSS Units
+         =============================== -->
+    <section class="css-units-section">
+      <h1>4️⃣ CSS Units (em vs rem)</h1>
+      <div class="em-box">
+        This box uses <b>em</b> units (relative to parent)
+      </div>
+      <div class="rem-box">
+        This box uses <b>rem</b> units (relative to root)
+      </div>
+    </section>
+
+    <!-- ===============================
+         SECTION 5: Transitions Example
+         =============================== -->
+    <section>
+      <h1>5️⃣ Transitions Example</h1>
+      <div class="transition-box"></div>
+      <p>
+        Hover over the orange box to see it rotate and change color smoothly!
+      </p>
+    </section>
+  </body>
+</html>
