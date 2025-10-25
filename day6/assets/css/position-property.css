@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.position-container {
+  width: 100vw;
+  height: 300vh;
+  border: 10px solid red;
+}
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+.box-1 {
+  background-color: pink;
+
+  position: static;
+  /* top: 20px;
+        bottom: ;
+        left: ;
+        right: ; */
+  /* All Addition property related to position will be ingnored */
+}
+.box-2 {
+  background-color: green;
+  position: relative;
+  left: 100px;
+  top: 150px;
+}
+.box-2 .bookmark {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.box-3 {
+  background-color: orange;
+  position: fixed;
+  top: 350px;
+}
+.box-4 {
+  background-color: blue;
+  position: sticky;
+  top: 0px;
+}
