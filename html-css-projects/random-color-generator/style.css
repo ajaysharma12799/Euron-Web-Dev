@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#color-background {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid maroon;
+}
+
+#color-background ol {
+  list-style-type: none;
+}
+
+#color-generator-button {
+  background-color: #3944f7;
+  border: none;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 500px;
+        padding: 30px;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 2em;
+      }
+
+      .input-section {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+
+      input[type="text"] {
+        flex: 1;
+        padding: 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+        border-color: #667eea;
+      }
+
+      button {
+        padding: 15px 30px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      }
+
+      .todo-list {
+        list-style: none;
+      }
+
+      .todo-item {
+        background: #f8f9fa;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        transition: transform 0.2s;
+      }
+
+      .todo-item:hover {
+        transform: translateX(5px);
+      }
+
+      .todo-item.completed {
+        opacity: 0.6;
+      }
+
+      .todo-item.completed .todo-text {
+        text-decoration: line-through;
+        color: #999;
+      }
+
+      input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      .todo-text {
+        flex: 1;
+        color: #333;
+        font-size: 16px;
+      }
+
+      .delete-btn {
+        padding: 8px 15px;
+        background: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .delete-btn:hover {
+        background: #c0392b;
+      }
+
+      .empty-state {
+        text-align: center;
+        color: #999;
+        padding: 40px 20px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📝 My Todo List</h1>
+
+      <div class="input-section">
+        <input type="text" placeholder="Add a new task..." value="" />
+        <button>Add</button>
+      </div>
+
+      <ul class="todo-list">
+        <li class="todo-item">
+          <input type="checkbox" />
+          <span class="todo-text">Buy groceries</span>
+          <button class="delete-btn">Delete</button>
+        </li>
+        <li class="todo-item completed">
+          <input type="checkbox" checked />
+          <span class="todo-text">Complete project proposal</span>
+          <button class="delete-btn">Delete</button>
+        </li>
+      </ul>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
