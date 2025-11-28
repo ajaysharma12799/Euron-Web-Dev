@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>Async Await</h1>
+    </div>
+
+    <script>
+      //   function getData(success) {
+      //     const futurePromiseObject = new Promise((resolve, reject) => {
+      //       setTimeout(() => {
+      //         if (success) {
+      //           resolve("Data received successfully");
+      //         } else {
+      //           reject("Some error occured while fetching data");
+      //         }
+      //       }, 5000);
+      //     });
+
+      //     futurePromiseObject
+      //       .then((data) => {
+      //         console.log(data);
+      //       })
+      //       .then(() => {
+      //         console.log(".then chaining");
+      //       })
+      //       .catch((error) => {
+      //         console.log(error);
+      //       })
+      //       .finally(() => {
+      //         console.log("Finally block will always execute");
+      //       });
+      //   }
+
+      //   getData(true);
+
+      //   function getAllTodos() {
+      //     const url = "https://jsonplaceholder.typicode.com/todos";
+      //     fetch(url)
+      //       .then((response) => {
+      //         console.log("Response: ", response);
+      //         return response.json();
+      //       })
+      //       .then((data) => {
+      //         console.log("Data: ", data);
+      //       })
+      //       .catch((error) => {
+      //         console.log("Error: ", error);
+      //       });
+      //   }
+
+      //   getAllTodos();
+
+      async function getAllTodosViaAsyncAwait() {
+        try {
+          const url = "https://jsonplaceholder.typicode.com/todos";
+          const response = await fetch(url);
+          const data = await response.json();
+          console.log("data: ", data);
+        } catch (error) {
+          console.error("Error: ", error);
+        }
+      }
+
+      getAllTodosViaAsyncAwait();
+    </script>
+  </body>
+</html>
